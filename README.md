@@ -237,6 +237,17 @@ https://github.com/juancarlospaco/nim-nimterlingua/blob/master/example/minimal.n
 
 Yes.
 
+- How to make an INI for a lot of languages?.
+
+```ini
+[cat]
+ES_AR = gato
+PT_BR = minino
+RU    = kot
+FR    = chat
+# A lot of languages here...
+```
+
 - This is not the same as Search&Replace of any Editor?.
 
 No.
