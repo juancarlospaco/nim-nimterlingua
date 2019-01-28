@@ -208,4 +208,4 @@ Yes.
 
 No.
 Because it actually fully understands the code,
-a typical Search&Replace of Editor can break comments, names, variables, etc.
+typical Search&Replace of Editor can break comments, names, variables, etc.
