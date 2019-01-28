@@ -187,4 +187,5 @@ Or use NimScript or NodeJS to get a JSON or CSV or similar format and get the da
 - I get `nimterlingua.nim(17, 29) Error: cannot open file: translations.cfg` ?
 
 Use a literal expanded **Full Path string** to the `*.cfg`.
+
 No `"./translations.cfg"`, no `"~/translations.cfg"`, but `"/home/user/translations.cfg"`
