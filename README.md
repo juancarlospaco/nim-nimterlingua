@@ -102,7 +102,7 @@ nim js -d:nodejs -d:PT_BR yourfile.nim
 # Example
 
 ```nim
-$ nim c -r example/bohemian_rhapsody.nim
+$ nim c -r -d:ES_AR example/bohemian_rhapsody.nim
 
 bohemian_rhapsody.nim(5, 11) Hint: ES_AR0("Is this the real life?") --> '"Es la vida real?"' [Pattern]
 bohemian_rhapsody.nim(6, 11) Hint: ES_AR1("Is this just fantasy?") --> '"Es sólo fantasía?"' [Pattern]
