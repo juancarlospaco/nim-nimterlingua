@@ -168,7 +168,7 @@ when defined(PT_BR):
 
 - Its not possible to have different languages in 1 Nim program?.
 
-Use a period (dot), exclamation, space or something, the string will not match anymore.
+Use a period (dot), exclamation, space, emoji or something, the string will not match anymore.
 
 ```ini
 [cat]
