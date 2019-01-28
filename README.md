@@ -192,6 +192,10 @@ Use a literal expanded **Full Path string** to the `*.cfg`.
 
 No `"./translations.cfg"`, no `"~/translations.cfg"`, but `"/home/user/translations.cfg"`
 
+- Is there a Minimal Basic example?.
+
+https://github.com/juancarlospaco/nim-nimterlingua/blob/master/example/minimal.nims
+
 - This works with NodeJS and JavaScript?.
 
 Yes.
