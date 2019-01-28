@@ -77,7 +77,7 @@ nim e -d:PT_BR yourfile.nims
 
 **Example Output:**
 
-```
+```nim
 nim c -r -d:ES_AR example.nim  
 
 example.nim(33, 8) Hint: ES_AR0("cat") --> '"gato"' [Pattern]
