@@ -179,7 +179,8 @@ ES_AR = gato
 if useSpanish: "cat" else: "cat."
 ```
 
-`"cat"` will get translated to Spanish `"cat."` not because of period.
+`"cat"` get translated to Spanish, `"cat."` remains English, because of period.
+You choose languages with `if` or `case` or similar.
 
 Or use NimScript or NodeJS to get a JSON or CSV or similar format and get the data from there.
 
