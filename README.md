@@ -170,8 +170,6 @@ when defined(PT_BR):
 
 Use a period (dot), exclamation, space or something, the string will not match anymore.
 
-Use NimScript to get a JSON or CSV or similar format and get the data from there.
-
 ```ini
 [cat]
 ES_AR = gato
@@ -182,6 +180,10 @@ if useSpanish: "cat" else: "cat."
 ```
 
 `"cat"` will get translated to Spanish `"cat."` not because of period.
+
+Use NimScript to get a JSON or CSV or similar format and get the data from there.
+
+Use NodeJS to get a JSON or CSV or similar format and get the data from there.
 
 - I get `nimterlingua.nim(17, 29) Error: cannot open file: translations.cfg` ?
 
