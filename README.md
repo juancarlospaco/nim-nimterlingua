@@ -1,2 +1,76 @@
-# nim-internimgua
-Internationalization at Compile Time for Nim, i18n from const for performance
+# Nimterlingua
+
+- Internationalization at Compile Time for Nim.
+- 1 Macro to replace strings in-place at compile time with 0 cost at runtime.
+- Translate unmodified code from 1 INI file. Replace Emojis and Unicode in-place.
+- High performance with low resources, everything is done compile-time only!.
+
+
+# Use
+
+**translations.cfg:**
+```
+# This is a comment.
+[cat]
+ES_AR = gato
+PT_BR = minino
+
+
+
+[dog]
+ES_AR = perro
+PT_BR = cão
+
+; You can replace Emojis. This is a comment.
+[:crown:]
+ES_AR = 👑
+PT_BR = 👑
+
+
+```
+
+**Nim:**
+
+```nim
+import nimterlingua
+
+nimterlingua("translations.cfg")
+echo "cat"
+echo "dog"
+echo ":crown:"
+```
+
+**Compile:**
+```
+nim c -r -d:ES_AR yourfile.nim
+```
+
+or
+
+```
+nim c -r -d:PT_BR yourfile.nim
+```
+
+
+**NimScript:**
+
+```nim
+import nimterlingua
+
+nimterlingua("translations.cfg")
+echo "cat"
+echo "dog"
+echo ":crown:"
+```
+
+
+**Run:**
+```
+nim e -d:ES_AR yourfile.nims
+```
+
+or
+
+```
+nim e -d:PT_BR yourfile.nims
+```
