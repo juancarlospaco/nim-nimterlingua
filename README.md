@@ -75,6 +75,30 @@ or
 nim e -d:PT_BR yourfile.nims
 ```
 
+
+**NodeJS:**
+
+```nim
+import nimterlingua
+
+nimterlingua("translations.cfg")
+echo "cat"
+echo "dog"
+echo ":crown:"
+```
+
+**Compile:**
+```
+nim js -d:nodejs -d:ES_AR yourfile.nim
+```
+
+or
+
+```
+nim js -d:nodejs -d:PT_BR yourfile.nim
+```
+
+
 # Example
 
 ```nim
@@ -138,3 +162,15 @@ when defined(PT_BR):
 ```
 
 </details>
+
+
+# FAQ
+
+- Its not possible to have different languages in 1 Nim program?.
+
+Use a period (dot), exclamation, space or something, the string will not match anymore.
+Use NimScript to get a JSON or CSV or similar format and get the data from there.
+
+- I get `nimterlingua.nim(17, 29) Error: cannot open file: translations.cfg` ?
+
+Use a literal expanded **Full Path string** to the `*.cfg`.
