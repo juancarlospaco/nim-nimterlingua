@@ -178,6 +178,7 @@ when defined(PT_BR):
 | `"cat"`                              | `gettext("cat")` or `_("cat")`        |
 | No GetText dependency                | GetText libs as dependency            |
 | 0 cost at runtime performance        | [Cost at runtime performance](https://stackoverflow.com/questions/18268608/performance-overhead-of-the-gettext-internationalization-system-in-c-c)     |
+| Chill Lazy Dev                       | Time consuming beyond translation itself |
 
 **GetText**
 ```pot
