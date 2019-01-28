@@ -203,3 +203,9 @@ https://github.com/juancarlospaco/nim-nimterlingua/blob/master/example/minimal.n
 - This works with NodeJS and JavaScript?.
 
 Yes.
+
+- This is not the same as Search&Replace of any Editor?.
+
+No.
+Because it actually fully understands the code,
+a typical Search&Replace of Editor can break comments, names, variables, etc.
