@@ -1,6 +1,6 @@
 import nimterlingua
 
-nimterlingua("/home/juan/code/nim-nimterlingua/example/translations.cfg")
+nimterlingua("translations.cfg")
 
 var foo = "Is this the real life?"
 var bar = "Is this just fantasy?"
