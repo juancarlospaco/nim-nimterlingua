@@ -177,7 +177,7 @@ when defined(PT_BR):
 | Unmodified code can be translated    | Requires refactor adding gettext functions |
 | `"cat"`                              | `gettext("cat")` or `_("cat")`        |
 | No GetText dependency                | GetText libs as dependency            |
-| 0 cost at runtime performance        | Small cost at runtime performance     |
+| 0 cost at runtime performance        | [Cost at runtime performance](https://stackoverflow.com/questions/18268608/performance-overhead-of-the-gettext-internationalization-system-in-c-c)     |
 
 **GetText**
 ```pot
