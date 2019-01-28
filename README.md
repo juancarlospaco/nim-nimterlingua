@@ -172,10 +172,15 @@ Use a period (dot), exclamation, space or something, the string will not match a
 
 Use NimScript to get a JSON or CSV or similar format and get the data from there.
 
-Example:
+```ini
+[cat]
+ES_AR = gato
+```
+
 ```nim
 if useSpanish: "cat" else: "cat."
 ```
+
 `"cat"` will get translated to Spanish `"cat."` not because of period.
 
 - I get `nimterlingua.nim(17, 29) Error: cannot open file: translations.cfg` ?
