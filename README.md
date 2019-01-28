@@ -169,7 +169,14 @@ when defined(PT_BR):
 - Its not possible to have different languages in 1 Nim program?.
 
 Use a period (dot), exclamation, space or something, the string will not match anymore.
+
 Use NimScript to get a JSON or CSV or similar format and get the data from there.
+
+Example:
+```nim
+if useSpanish: "cat" else: "cat."
+```
+`"cat"` will get translated to Spanish `"cat."` not because of period.
 
 - I get `nimterlingua.nim(17, 29) Error: cannot open file: translations.cfg` ?
 
