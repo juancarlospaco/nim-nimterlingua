@@ -237,6 +237,15 @@ https://github.com/juancarlospaco/nim-nimterlingua/blob/master/example/minimal.n
 
 Yes.
 
+- My Translated text contains `=` will make it fail?.
+
+Use `splitter=":"`, then use it as splitter separator.
+
+```ini
+[cat]
+ES_AR : gato
+```
+
 - How to make an INI for a lot of languages?.
 
 ```ini
