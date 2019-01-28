@@ -9,7 +9,7 @@
 # Use
 
 **translations.cfg:**
-```
+```ini
 # This is a comment.
 [cat]
 ES_AR = gato
