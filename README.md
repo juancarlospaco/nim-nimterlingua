@@ -123,6 +123,7 @@ Continúa, continúa, como si nada realmente importara
   <summary>How does it works internally?.</summary>
 
 ```nim
+# expandMacros:
 
 when defined(ES_AR):
   template ES_AR0{("cat"){texts}}(texts: string{lit, noalias}): string =
