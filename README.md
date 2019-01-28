@@ -74,3 +74,17 @@ or
 ```
 nim e -d:PT_BR yourfile.nims
 ```
+
+**Example Output:**
+
+```
+nim c -r -d:ES_AR example.nim  
+
+example.nim(33, 8) Hint: ES_AR0("cat") --> '"gato"' [Pattern]
+example.nim(34, 8) Hint: ES_AR2("dog") --> '"perro"' [Pattern]
+example.nim(35, 8) Hint: ES_AR4(":crown:") --> '"👑"' [Pattern]
+
+gato
+perro
+👑
+```
