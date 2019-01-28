@@ -164,6 +164,37 @@ when defined(PT_BR):
 </details>
 
 
+# Nimterlingua Vs GetText
+
+| Nimterlingua                         | GetText                               |
+|--------------------------------------|---------------------------------------|
+| No `*.po` files                      | You need to write   `*.po` files      |
+| No `*.pot` files                     | You need to extract `*.pot` files     |
+| No `*.mo` files                      | You need to compile `*.mo` files      |
+| No `*.gmo` files                     | You need to compile `*.gmo` files     |
+| Only `nim`                           | `xgettext`, `msginit`, `msgfmt`, etc  |
+| Any editor, `*.INI` format           | Requires `poedit` for fluent workflow |
+| Unmodified code can be translated    | Requires refactor adding gettext functions |
+| `"cat"`                              | `gettext("cat")` or `_("cat")`        |
+| No GetText dependency                | GetText libs as dependency            |
+| 0 cost at runtime performance        | Small cost at runtime performance     |
+
+**GetText**
+```pot
+#. TRANSLATORS: Thank you for contributing to this project.
+#: src/name.c:36
+msgid "cat"
+msgstr "gato"
+
+```
+
+**Nimterlingua**
+```ini
+[cat]
+ES_AR = gato
+```
+
+
 # FAQ
 
 - Its not possible to have different languages in 1 Nim program?.
