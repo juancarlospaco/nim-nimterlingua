@@ -180,7 +180,8 @@ if useSpanish: "cat" else: "cat."
 ```
 
 `"cat"` get translated to Spanish, `"cat."` remains English, because of period.
-You choose languages with `if` or `case` or similar.
+
+You choose languages with `if` or `case` or similar on your code.
 
 Or use NimScript or NodeJS to get a JSON or CSV or similar format and get the data from there.
 
