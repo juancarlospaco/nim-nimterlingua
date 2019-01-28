@@ -196,7 +196,7 @@ No `"./translations.cfg"`, no `"~/translations.cfg"`, but `"/home/user/translati
 
 https://github.com/juancarlospaco/nim-nimterlingua/blob/master/example/minimal.nims
 
-- How do you use this with Python or JavaScript?.
+- How do you use this with Python or NodeJS or JavaScript?.
 
 https://github.com/juancarlospaco/nim-nimterlingua/blob/master/example/minimal.nims
 
