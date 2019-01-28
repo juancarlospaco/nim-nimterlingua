@@ -115,3 +115,25 @@ Si no regreso mañana a esta hora
 Continúa, continúa, como si nada realmente importara
 
 ```
+
+
+### under the hood
+
+<details>
+  <summary>How does it works internally?.</summary>
+
+```nim
+
+when defined(ES_AR):
+  template ES_AR0{("cat"){texts}}(texts: string{lit, noalias}): string =
+    ## Compile with -d:ES_AR to auto translate at compile time to ES_AR Lang ISO code.
+    when texts == "cat": "gato" else: "cat"
+
+when defined(PT_BR):
+  template PT_BR1{("cat"){texts}}(texts: string{lit, noalias}): string =
+    ## Compile with -d:PT_BR to auto translate at compile time to PT_BR Lang ISO code.
+    when texts == "cat": "minino" else: "cat"
+
+```
+
+</details>
