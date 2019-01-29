@@ -201,7 +201,7 @@ ES_AR = gato
 Its designed for translation, but it does not force anything on you,
 you can be creative and explore other possible uses.
 
-It replaces in-place any arbitrary `string` with any arbitrary `string` you want at compile time with 0 cost at runtime.
+It replaces in-place any arbitrary `string` with any arbitrary `string` you want at compile time with 0 cost at runtime without touching the code.
 
 _Let us know if you built something cool with it!._
 
