@@ -1,6 +1,6 @@
 # Nimterlingua
 
-- Internationalization at Compile Time for Nim.
+- Internationalization and localization at Compile Time for Nim.
 - 1 Macro to replace strings in-place at compile time with 0 cost at runtime.
 - Translate unmodified code from 1 INI file. Replace Emojis and Unicode in-place.
 - High performance with low resources, everything is done compile-time only!.
@@ -195,6 +195,15 @@ msgstr "gato"
 [cat]
 ES_AR = gato
 ```
+
+# Beyond Translation
+
+Its designed for translation, but it does not force anything on you,
+you can be creative and explore other possible uses.
+
+It replaces in-place any arbitrary `string` with any arbitrary `string` you want at compile time with 0 cost at runtime.
+
+_Let us know if you built something cool with it!._
 
 
 # FAQ
