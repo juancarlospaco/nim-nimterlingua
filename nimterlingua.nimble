@@ -10,4 +10,4 @@ skipDirs      = @["example"]
 
 # Dependencies
 
-requires "nim >= 0.19.2"
+requires "nim >= 0.20.0"

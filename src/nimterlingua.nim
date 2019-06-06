@@ -1,4 +1,7 @@
-import macros, strutils
+import macros
+
+from strutils import strip, splitLines, split, format, toUpperAscii
+
 
 const tI18i = """
 when defined($1):
@@ -8,8 +11,14 @@ when defined($1):
 
 """
 
+const rI18i = """
+template $1$4{("$3"){texts}}(texts: string{lit, noalias}): untyped =
+  func $1$4: string = "$3"
 
-macro nimterlingua*(iniFile: string, splitter="="): typed =
+"""
+
+
+macro nimterlingua*(iniFile: string, splitter="=") =
   ## Macro to replace strings in-place at compile time with 0 cost at runtime.
   assert iniFile.strVal.len > 5, "iniFile must not be empty string (INI or CFG)"
   var i: int
