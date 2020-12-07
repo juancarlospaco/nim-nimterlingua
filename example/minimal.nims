@@ -1,5 +1,5 @@
 import nimterlingua
-nimterlingua("/home/juan/code/nim-nimterlingua/example/translations.cfg")
+nimterlingua()
 ###  $ nim e -d:ES_AR minimal.nims
 ###  $ nim e -d:ES_AR minimal.nims > python_translated.py
 ###  $ nim e -d:ES_AR minimal.nims > javascript_translated.js
