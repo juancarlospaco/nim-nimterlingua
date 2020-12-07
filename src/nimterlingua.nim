@@ -18,12 +18,13 @@ template $1$4{("$3"){texts}}(texts: string{lit, noalias}): untyped =
 """
 
 
-macro nimterlingua*(iniFile: string, splitter="=") =
+macro nimterlingua*(splitter="=") =
   ## Macro to replace strings in-place at compile time with 0 cost at runtime.
-  assert iniFile.strVal.len > 5, "iniFile must not be empty string (INI or CFG)"
+  const iniFile {.strdefine.} = "translations.cfg"
+  assert iniFile.len > 5, "iniFile must not be empty string (INI or CFG)"
   var i: int
   var source, section: string
-  for line in iniFile.strVal.staticRead.strip.splitLines:
+  for line in iniFile.staticRead.strip.splitLines:
       if unlikely(line.strip.len == 0 or line.strip[0] in {'#', ';'}): continue
       if line.strip[0] == '[' and line.strip[line.strip.len-1] == ']':
         section = line.strip[1..line.strip.len - 2].strip  # [SomeWord]

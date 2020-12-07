@@ -34,7 +34,7 @@ PT_BR = 👑
 ```nim
 import nimterlingua
 
-nimterlingua("translations.cfg")
+nimterlingua()
 echo "cat"
 echo "dog"
 echo ":crown:"
@@ -42,13 +42,13 @@ echo ":crown:"
 
 **Compile:**
 ```
-nim c -r -d:ES_AR yourfile.nim
+nim c -r -d:ES_AR -d:iniFile="translations.cfg" yourfile.nim
 ```
 
 or
 
 ```
-nim c -r -d:PT_BR yourfile.nim
+nim c -r -d:PT_BR -d:iniFile="translations.cfg" yourfile.nim
 ```
 
 
@@ -57,7 +57,7 @@ nim c -r -d:PT_BR yourfile.nim
 ```nim
 import nimterlingua
 
-nimterlingua("translations.cfg")
+nimterlingua()
 echo "cat"
 echo "dog"
 echo ":crown:"
@@ -66,13 +66,13 @@ echo ":crown:"
 
 **Run:**
 ```
-nim e -d:ES_AR yourfile.nims
+nim e -d:ES_AR -d:iniFile="translations.cfg" yourfile.nims
 ```
 
 or
 
 ```
-nim e -d:PT_BR yourfile.nims
+nim e -d:PT_BR -d:iniFile="translations.cfg" yourfile.nims
 ```
 
 
@@ -81,7 +81,7 @@ nim e -d:PT_BR yourfile.nims
 ```nim
 import nimterlingua
 
-nimterlingua("translations.cfg")
+nimterlingua()
 echo "cat"
 echo "dog"
 echo ":crown:"
@@ -89,20 +89,21 @@ echo ":crown:"
 
 **Compile:**
 ```
-nim js -d:nodejs -d:ES_AR yourfile.nim
+nim js -d:nodejs -d:ES_AR -d:iniFile="translations.cfg" yourfile.nim
 ```
 
 or
 
 ```
-nim js -d:nodejs -d:PT_BR yourfile.nim
+nim js -d:nodejs -d:PT_BR -d:iniFile="translations.cfg" yourfile.nim
 ```
 
 
 # Example
 
 ```nim
-$ nim c -r -d:ES_AR example/bohemian_rhapsody.nim
+$ cd example
+$ nim c -r -d:ES_AR -d:iniFile="translations.cfg" bohemian_rhapsody.nim
 
 bohemian_rhapsody.nim(5, 11) Hint: ES_AR0("Is this the real life?") --> '"Es la vida real?"' [Pattern]
 bohemian_rhapsody.nim(6, 11) Hint: ES_AR1("Is this just fantasy?") --> '"Es sólo fantasía?"' [Pattern]
@@ -230,9 +231,7 @@ Or use NimScript or NodeJS to get a JSON or CSV or similar format and get the da
 
 - I get `nimterlingua.nim(17, 29) Error: cannot open file: translations.cfg` ?
 
-Use a literal expanded **Full Path string** to the `*.cfg`.
-
-No `"./translations.cfg"`, no `"~/translations.cfg"`, but `"/home/user/translations.cfg"`
+compile with `-d:iniFile="path to your translations.cfg"`
 
 - Is there a Minimal Basic example?.
 
