@@ -1,6 +1,6 @@
-import macros
+import std/macros
 
-from strutils import strip, splitLines, split, format, toUpperAscii
+from std/strutils import strip, splitLines, split, format, toUpperAscii
 
 
 const tI18i = """
@@ -11,14 +11,14 @@ when defined($1):
 
 """
 
-const rI18i = """
+const rI18i {.used.} = """
 template $1$4{("$3"){texts}}(texts: string{lit, noalias}): untyped =
   func $1$4: string = "$3"
 
 """
 
 
-macro nimterlingua*(splitter="=") =
+macro nimterlingua*(splitter = "=") =
   ## Macro to replace strings in-place at compile time with 0 cost at runtime.
   const iniFile {.strdefine.} = "translations.cfg"
   assert iniFile.len > 5, "iniFile must not be empty string (INI or CFG)"
@@ -39,7 +39,7 @@ macro nimterlingua*(splitter="=") =
 
 
 when isMainModule:
-  nimterlingua("translations.cfg", splitter="=")
+  nimterlingua(splitter = "=")
   echo "cat"
   echo "dog"
   echo ":crown:"
