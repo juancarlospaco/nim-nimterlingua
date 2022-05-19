@@ -1,0 +1,15 @@
+name: Pull Request AntiSpamm
+on: [pull_request]
+jobs:
+  automation:
+    name: Repo Automation
+    runs-on: ubuntu-latest
+    if: ${{ !github.event.pull_request.draft && !contains(github.event.head_commit.message, '[skip ci]') }}
+    steps:
+
+      # AntiSpamm for Pull Requests: Stops single-commit PR automatically, like Hacktoberfests, Bots, Trolls, etc.
+      - name: Must be >= 3 commits
+        if: ${{ github.event.pull_request.commits < 3 }}
+        uses: actions/github-script@v5
+        with:
+          script: core.setFailed('AntiSpamm\tMust be >= 3 commits, make more commits to unlock.')
