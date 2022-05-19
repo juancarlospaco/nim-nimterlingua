@@ -270,3 +270,8 @@ FR    = chat
 No.
 Because it actually fully understands the code,
 typical Search&Replace of Editor can break comments, names, variables, etc.
+
+
+# Stars
+
+![](https://starchart.cc/juancarlospaco/nim-nimterlingua.svg)
